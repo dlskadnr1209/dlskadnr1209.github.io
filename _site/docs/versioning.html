@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <!-- Copyright 2019-2021 Vanessa Sochat-->
+  <head>
+<meta charset="utf-8">
+<!-- Copyright 2019-2021 Vanessa Sochat-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.55.6" />
+
+<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+<link rel="alternate" type="application/rss&#43;xml" href="/docs/index.xml">
+
+<link rel="shortcut icon" href="/docsy-jekyll/assets/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/docsy-jekyll/assets/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/docsy-jekyll/assets/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/docsy-jekyll/assets/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/docsy-jekyll/assets/favicons/android-icon-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/docsy-jekyll/assets/favicons/android-icon-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/docsy-jekyll/assets/favicons/android-icon-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/docsy-jekyll/assets/favicons/android-icon-96x196.png" sizes="96x196">
+<link rel="icon" type="image/png" href="/docsy-jekyll/assets/favicons/android-icon-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/docsy-jekyll/assets/favicons/android-icon-192x192.png"sizes="192x192">
+
+<title>Versioning your Docs</title>
+<meta property="og:title" content="Versioning your Docs" />
+<meta property="og:description" content="How to turn on and use versioning" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:4000" />
+<meta property="og:site_name" content="http://localhost:4000" />
+
+<meta itemprop="name" content="Versioning your Docs">
+<meta itemprop="description" content="How to turn on and use versioning">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Versioning your Docs"/>
+<meta name="twitter:description" content="How to turn on and use versioning"/>
+
+<link rel="stylesheet" href="/docsy-jekyll/assets/css/main.css">
+<link rel="stylesheet" href="/docsy-jekyll/assets/css/palette.css">
+<script
+  src="/docsy-jekyll/assets/js/jquery-3.3.1/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8= sha256-T+aPohYXbm0fRYDpJLr+zJ9RmYTswGsahAoIsNiMld4="
+  crossorigin="anonymous"></script>
+</head>
+
+  
+
+  
+  <body class="td-section">
+    <header>
+        <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/docsy-jekyll/">
+            <span class="navbar-logo"></span><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149v0 0zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.328-2.2733-15.458-6.4032s-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zM197.0804 232.033c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zM197.0839 232.0372c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zM197.0839 232.0372c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><path style="fill:#5b7fc0" d="M198.8952 225.1043h122.6266v13.8671H198.8952z"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.328-2.2733-15.458-6.4032s-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zM197.0804 177.6188c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zM197.0839 177.623c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zM197.0839 177.623c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><path style="fill:#d95140" d="M198.8952 170.69h122.6266v13.8671H198.8952z"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zM197.5309 286.4723c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zM197.5344 286.4765c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zM197.5344 286.4765c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><path style="fill:#56a55c" d="M199.3456 279.5436h122.6266v13.8671H199.3456z"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.328-2.2733-15.458-6.4032-4.13-4.1299-6.4032-9.6186-6.4056-15.4628.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zM197.0804 340.5784c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zM197.0839 340.5826c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zM197.0839 340.5826c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><path style="fill:#f1bc42" d="M198.8952 333.6497h122.6266v13.8671H198.8952z"/></g></g></svg>
+<span class="text-uppercase font-weight-bold">NULEE BLOG</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+                            <a class="nav-link" href="https://github.com/vsoch/docsy-jekyll" target="_blank"><span>GitHub</span></a>
+			</li>
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+                            <a class="nav-link" href="/docsy-jekyll/about" ><span>About</span></a>
+			</li>
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+                            <a class="nav-link" href="/docsy-jekyll/docs" ><span>Documentation</span></a>
+			</li>
+      
+      <!-- <li class="nav-item mr-4 mb-2 mb-lg-0"> -->
+        
+          <span class="nav-link ">Release:</span>
+        
+        <li class="nav-item dropdown d-none d-lg-block">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Current</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            
+            
+              
+                <a class="dropdown-item" href="/docsy-jekyll/docs/versioning">Current</a>
+              
+            
+            
+              
+                
+                <a class="dropdown-item" href="/docsy-jekyll/docs/Archive/Previous/versioning">Previous</a>
+              
+            
+          </div>
+        </li>
+      <!-- </li> -->
+      
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+ <input type="search" class="form-control td-search-input" placeholder="&#xf002 Search this site…" aria-label="Search this site…" autocomplete="off">
+        </div>
+
+	<div class="navbar-nav d-none d-lg-block">
+          <a class="gh-source" data-gh-source="github" href="https://github.com/vsoch/docsy-jekyll" title="Go to repository" data-md-state="done">
+          <div class="gh-source__repository">
+            <i class="fab fa fa-github fa-2x" style='padding-right:20px; float:left; margin-top:5px'></i>
+            vsoch/docsy-jekyll
+          <ul class="gh-source__facts"><li class="gh-source__fact" id='stars'></li><li id="forks" class="gh-source__fact"></li></ul></div></a>
+        </div>
+      </div>
+
+
+</nav>
+</header>
+
+<script>
+$(document).ready(function() {
+  var url = "https://api.github.com/search/repositories?q=vsoch/docsy-jekyll";
+  fetch(url, { 
+      headers: {"Accept":"application/vnd.github.preview"}
+  }).then(function(e) {
+    return e.json()
+  }).then(function(r) {
+     console.log(r.items[0])
+     stars = r.items[0]['stargazers_count']
+     forks = r.items[0]['forks_count']
+     $('#stars').text(stars + " Stars")
+     $('#forks').text(forks + " Forks")
+  });
+});
+</script>
+
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+          <div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    <input type="search" class="form-control td-search-input" placeholder="&#xf002 Search this site…" aria-label="Search this site…" autocomplete="off">
+      <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+      </button>
+  </form>  
+  
+  <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+    
+    
+    
+    
+    
+    
+      <ul class="td-sidebar-nav__section pr-md-3">
+        
+        
+      
+        
+        
+        <li class="td-sidebar-nav__section-title">
+          <a  href="/docsy-jekyll/docs" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Documentation</a>
+        </li>
+        
+          <ul>
+            <li class="collapse show" id="documentation">
+              <ul class="td-sidebar-nav__section pr-md-3">
+                
+                  
+                  
+                  
+                  <li class="td-sidebar-nav__section-title">
+                    <a href="
+                                /docsy-jekyll/docs/getting-started
+                             " 
+                       class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section ">Getting Started
+                    </a>
+                  </li>
+                  
+                
+                  
+                  
+                  
+                  <li class="td-sidebar-nav__section-title">
+                    <a href="
+                                /docsy-jekyll/docs/versioning
+                             " 
+                       class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section active">Versioning
+                    </a>
+                  </li>
+                  
+                    <ul>
+                      <li class="collapse show" id="">
+                        
+                      </li>
+                    </ul>
+                  
+                
+                  
+                  
+                  
+                  <li class="td-sidebar-nav__section-title">
+                    <a href="
+                                /docsy-jekyll/about
+                             " 
+                       class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section ">About
+                    </a>
+                  </li>
+                  
+                
+                  
+                  
+                  
+                  <li class="td-sidebar-nav__section-title">
+                    <a href="
+                                /docsy-jekyll/news
+                             " 
+                       class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section ">News
+                    </a>
+                  </li>
+                  
+                
+              </ul>
+            </li>
+          </ul>
+        
+      </ul>
+    
+      <ul class="td-sidebar-nav__section pr-md-3">
+        
+        
+      
+        
+        
+        <li class="td-sidebar-nav__section-title">
+          <a  href="/docsy-jekyll/docs/extras" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Extras</a>
+        </li>
+        
+          <ul>
+            <li class="collapse show" id="extras">
+              <ul class="td-sidebar-nav__section pr-md-3">
+                
+                  
+                  
+                  
+                  <li class="td-sidebar-nav__section-title">
+                    <a href="
+                                /docsy-jekyll/docs/extras/example-quiz
+                             " 
+                       class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section ">Quizzes
+                    </a>
+                  </li>
+                  
+                
+                  
+                  
+                  
+                  <li class="td-sidebar-nav__section-title">
+                    <a href="
+                                /docsy-jekyll/tags
+                             " 
+                       class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section ">Tags Page
+                    </a>
+                  </li>
+                  
+                
+              </ul>
+            </li>
+          </ul>
+        
+      </ul>
+    
+  </nav>
+</div>
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+              <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+                  <a href="https://github.com/vsoch/docsy-jekyll/edit/master/_docs/versioning.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/vsoch/docsy-jekyll/issues/new?labels=question&title=Question:&body=Question on: https://github.com/vsoch/docsy-jekyll/tree/master/_docs/versioning.md" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a href="https://github.com/vsoch/docsy-jekyll/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+<!-- this will parse through the header fields and add a button to open
+     an issue / ask a question on Github. The editable field should be in
+     the post frontend matter, and refer to the label to open the issue for -->
+
+              </div>
+              <nav id="TableOfContents"><ul>
+              <li><ul id="TOC">
+                <!-- Links will be appended here-->
+              </ul></li>
+              </ul></nav>
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	      <ol class="breadcrumb spb-1">
+              
+              
+                
+                  
+                    
+                      
+                      <li class="breadcrumb-item">
+                        <a href="http://localhost:4000/docsy-jekyll/docs/">Documentation</a>
+                      </li>
+                      
+                    
+                  
+                
+              
+                
+                  
+                    <li class="breadcrumb-item active" aria-current="page">
+                      <a href="http://localhost:4000/docsy-jekyll/docs/versioning">Versioning your Docs</a>
+                    </li>
+                  
+                
+              
+	      </ol>
+           </nav>
+           <div class="td-content">        
+            
+              
+            
+            
+	      <h1 id="versioning">Versioning</h1>
+
+<p>Versioning documentation is a useful feature that can be achieved using Docsy Jekyll. It allows you to take snapshots of your documentation that may align with a specific version of a product or service, or you may wish to just keep a historical view of the changes that have been made to your documents over time.</p>
+
+<div class="alert alert-info" role="alert">
+<h4 class="alert-heading">Note: This only allows you to version documents inside the _docs folder, it does not allow you to version any files outside of that, such as Pages, Posts etc.</h4>
+
+</div>
+
+<p>The following information will take you through the detailed setup of versioning your documentation but in summary there will be four tasks that need to be completed to version your documents.</p>
+
+<ol>
+  <li>Copy the current _docs content into a subfolder of _docs/Archive (e.g., within a folder named by the version)</li>
+  <li>Add a corresponding table of contents to _data/versions</li>
+  <li>Update the _data/toc-mapping.yml file to point the new table of contents</li>
+  <li>Test your site locally to ensure it works as expected!</li>
+</ol>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>The way in which versioning is achieved is by duplicating your whole document directory and placing it inside an ‘archive’ subdirectory with the name of that version. The following illustrates what the base document root looks like <em>without</em> another version for this Docsy Jekyll site.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document root
+│      
+└─── _data
+└─── _docs
+        └─── extras
+        └─── subfolder
+        example-page.md
+        getting-started.md
+        subfolder.md
+        versioning.md
+</code></pre></div></div>
+<p>To create a version of this documentation we first create a folder with the version name we want to use inside of the ‘archive’ folder and copy all the files and folders from our root _docs folder into that new folder. You could use the following commands to achieve this:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Our last release is version "Previous" (could also be 1.0.0 or semver), we are pinning the docs to this version`</span>
+<span class="nb">mkdir</span> <span class="nt">-p</span> _docs/Archive/Previous
+<span class="c"># copy all content under _docs except Archive into this new folder.`</span>
+<span class="nb">cp</span> <span class="nt">-r</span> _docs/!<span class="o">(</span>Archive<span class="o">)</span> _docs/Archive/Previous
+</code></pre></div></div>
+
+<p>After we do this, we end up with a structure shown below - the older documentation is moved into the folder ‘Previous’. This step effectively takes a snapshot of our documents at a point in time and the expectation is that we will no longer maintain these pages. If you look at the structure of this site you will see the ‘Previous’ folder, which now holds our previous documentation, does not contain the versioning.md markdown file as this is new in the current release. This means that if you look at this page on the current site and then choose “Previous” from the version dropdown, you will get a 404 error (not found).</p>
+
+<pre><code>
+document root
+│      
+└─── _data
+└─── _docs
+        └─── extras
+        └─── subfolder
+        └─── Archive
+              └─── <span style="color:blue;"><b>Previous</b></span>
+                  └─── extras
+                  └─── subfolder
+                  example-page.md
+                  getting-started.md
+                  subfolder.md
+        example-page.md
+        getting-started.md
+        subfolder.md
+        versioning.md
+</code></pre>
+
+<p>You would now continue to add, update or remove markdown files from the main _docs directory in order to work on the current version of your documentation.</p>
+
+<p>Once the versioning has been correctly configured and you have created a snapshot, you can access those documents by adding the version to the url to access that archived version (e.g. /docs/Archive/Previous/getting-started).</p>
+
+<p>To enable the users to interact with these versioned documents through the UI there needs to be some updates to the _config.yml file to setup and enable it. The following is a snippet from the _config.yml file specific to the versioning options that are available.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version_params</span><span class="pi">:</span>
+  <span class="na">version_menu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Release"</span>
+  <span class="na">version_dir</span><span class="pi">:</span> <span class="s">Archive</span>
+  <span class="na">tocversion_dir</span><span class="pi">:</span> <span class="s">versions</span>
+  <span class="na">versioning</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">latest</span><span class="pi">:</span> <span class="s">current</span>
+  <span class="na">allow_search</span><span class="pi">:</span> <span class="no">true</span>  
+  <span class="na">search_versions</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">main</span>
+    <span class="pi">-</span> <span class="s">current</span>
+    <span class="pi">-</span> <span class="s">beta</span>
+  <span class="na">versions</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">main</span>
+    <span class="pi">-</span> <span class="s">current</span>
+    <span class="pi">-</span> <span class="s">beta</span>
+    <span class="pi">-</span> <span class="s">v3.1</span>
+    <span class="pi">-</span> <span class="s">v3.0.1</span>
+    <span class="pi">-</span> <span class="s">v3.0</span>
+    <span class="pi">-</span> <span class="s">v2.4.5</span>
+    <span class="pi">-</span> <span class="s">v2.4.4</span>
+</code></pre></div></div>
+
+<h3 id="versioning-options">Versioning Options</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>versioning</td>
+      <td>This determines whether the versioning functionality is enabled</td>
+      <td>true | false</td>
+    </tr>
+    <tr>
+      <td>version_menu</td>
+      <td>In addition to the version dropdown you can specify some text to display alongside it<br /> If you do not wish to use this then make this value an empty string</td>
+      <td>Release</td>
+    </tr>
+    <tr>
+      <td>version_dir</td>
+      <td>This is the directory where all the alternative versions of the documentation will be contained beneath the _docs directory <br />i.e. setting this to the value of Archive (Note: <strong>No</strong> trailing slash) will mean all alternative versions will be found in _docs/Archive/</td>
+      <td>Archive</td>
+    </tr>
+    <tr>
+      <td>tocversion_dir</td>
+      <td>This is the directory inside your _data directory where Docsy Jekyll will find the alternative TOC files that are used for other versions of the documentation. You can configure this to be whatever name you like, just ensure your other TOCs can be found there!</td>
+      <td>versions</td>
+    </tr>
+    <tr>
+      <td>latest</td>
+      <td>From the list of versions this determines the one which relates to your base docs directory.<br /> Note the url for your docs will not contain a version identifier for this particular version</td>
+      <td>current | v3.1</td>
+    </tr>
+    <tr>
+      <td>allow_search</td>
+      <td>A boolean to indicate if we should allow searching over versions. If False, only the current is displayed in results</td>
+      <td>true | false</td>
+    </tr>
+    <tr>
+      <td>search_version</td>
+      <td>A list of versions to include in the search. Current or latest will be tagged with the site.tag_color, the rest will be gray</td>
+      <td>current | previous</td>
+    </tr>
+    <tr>
+      <td>versions</td>
+      <td>A list of versions you wish to display in the version dropdown <br /> Note that there are several special keywords that can be used: current, main, alpha, beta, rc and pre, see below for more details</td>
+      <td>current | v1.0 | v2.1.3</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Note: The versions listed must have the same name as the folder name in which that version of the documentation resides otherwise jekyll it will not find it! The exception is the version 'current' which does not have a separate folder and is used to inform jekyll to utilize the base _docs folder.</h4>
+
+</div>
+
+<h3 id="version-keywords">Version Keywords</h3>
+<p>There are six special keywords that can be used in the versions config.</p>
+<ul>
+  <li>main</li>
+  <li>alpha</li>
+  <li>beta</li>
+  <li>rc</li>
+  <li>pre</li>
+  <li><em>current</em></li>
+</ul>
+
+<p>The value <strong>main</strong>, is used to display the latest development version of the documentation, a banner is used to denote that the code and documentation maybe unstable and that they are not guaranteed to be correct or up to date and could change at any time.</p>
+
+<p>The value of <strong>alpha</strong>, <strong>beta</strong>, <strong>rc</strong> and <strong>pre</strong> are used to denote that the documentation is a pre-production version and as such a banner is displayed announcing that the code/documentation maybe unstable and the content in the pages are still work in progress so may not be completely up to date or correct.</p>
+
+<p>If you wish to utilize this feature then you must create folders within your _docs/<em>Archive</em> directory with the names of those you wish to use and place your documentation inside it/them.</p>
+
+<p>The value of <strong>current</strong> is used to align with the latest version of your documentation in your base _docs folder so there <strong>doesn’t</strong> need to be a specific folder created and named ‘current’ to serve them. The name ‘current’, for the value of ‘latest’ in the previous example, can be changed to whatever you wish to name the current release but be aware that the version set in the _config.yml file also needs to match it! See the example below where we have called the latest release v3.2 rather than ‘current’ and we also have a version exactly named v3.2 too, as mentioned this version will point to your base _docs directory.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version_params</span><span class="pi">:</span>
+  <span class="na">version_menu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Release"</span>
+  <span class="na">version_dir</span><span class="pi">:</span> <span class="s">Archive</span>
+  <span class="na">tocversion_dir</span><span class="pi">:</span> <span class="s">versions</span>
+  <span class="na">versioning</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">latest</span><span class="pi">:</span> <span class="s">v3.2</span>
+  <span class="na">versions</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">main</span>
+    <span class="pi">-</span> <span class="s">v3.2</span>
+    <span class="pi">-</span> <span class="s">beta</span>
+    <span class="pi">-</span> <span class="s">v3.1</span>
+</code></pre></div></div>
+
+<h3 id="configuring-version-alerts">Configuring Version Alerts</h3>
+
+<p>Depending on the version keywords you may use Docsy Jekyll tries to determine if the documentation is historical (e.g. out of date) or is a upcoming release of information and will show one of the following banners to alert users to the fact that they are not reviewing the current version of the documentation.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/docsy-jekyll/assets/img/versionalertoutdated.png" alt="Historical Versions" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><em>This banner is shown for historical versions of your documentation</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/docsy-jekyll/assets/img/versionalertbeta.png" alt="Beta Versions" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><em>This banner is shown for pre-production versions of your documentation</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/docsy-jekyll/assets/img/versionalertmain.png" alt="Development Versions" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><em>This banner is shown for development versions of your documentation</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>These banners can be customised to have the wording or imagery you require by altering the HTML in the _includes/versionalert.html file.</p>
+
+<h2 id="table-of-contents-handling-toc">Table of Contents Handling (TOC)</h2>
+
+<p>As with the documents, your TOC contents also need to be updated so they correctly point to the document versions you are viewing.</p>
+
+<p>You will need to update the toc file as the structure of your documentation/toc changes over time but as we have taken a snapshot of our documentation so we need to do the same thing for our toc so it reflects the document structure at that point in time too. You will see that for this site we have the versions of Current and Previous and you will see that the Current version has all the information about versioning which didn’t exist in the prior version.</p>
+
+<p>To enable the TOC to change based on the version, we have to create a new toc file and name it {version}-toc.yml and it must be placed in a subdirectory of _data whose name is specified by the tocversion_dir parameter in the _config.yml file (for this site it can be found in the _data/versions subdirectory). We have created previous-toc.yml in the _data/versions directory that has the TOC structure for the prior version where we did not have the versioning.md file present.</p>
+
+<p>To create this version of the toc file file we can use the following commands</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Our last release is version "Previous" so we want to create a TOC for that inside our versions directory</span>
+<span class="nb">mkdir</span> <span class="nt">-p</span> _data/versions
+<span class="c"># copy the existing TOC file to our version subdirectory and name it as {version}-toc.yml</span>
+<span class="nb">cp  </span>_data/toc.yml _data/versions/previous-toc.yml
+</code></pre></div></div>
+
+<div class="alert alert-info" role="alert">
+<h4 class="alert-heading">Note: The toc.yml file will always be our current table of contents pointing to the most recent version of the documentation in the base of our _docs folder. When adding additional items to your toc.yml file you do not need to worry about the version identifier as that is taken care of by Docsy Jekyll when viewing alternative versions, continue to have the urls pointing to the files in the base docs directory.</h4>
+
+</div>
+
+<p>Here is what our current toc.yml file in our _data directory looks like, the previous-toc.yml file will look identical apart from omitting the ‘Versioning’ title and link which was added for this release, and of course will live in the versions subdirectory of _data as well.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Documentation</span>
+  <span class="s">url</span><span class="err">:</span> <span class="s">docs</span>
+  <span class="s">links</span><span class="err">:</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Getting</span><span class="nv"> </span><span class="s">Started"</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">docs/getting-started"</span>
+      <span class="na">children</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Features</span>
+          <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">docs/getting-started#getting-started"</span>
+        <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Development</span>
+          <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">docs/getting-started#development"</span>
+        <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Customization</span>
+          <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">docs/getting-started#customization"</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Versioning</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">docs/versioning"</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">About"</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">about"</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">News"</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">news"</span>
+<span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Extras"</span>
+  <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">docs/extras"</span>
+  <span class="na">links</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Quizzes</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">docs/extras/example-quiz"</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Tags Page</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">tags"</span>
+</code></pre></div></div>
+
+<p>Now not every version of your documentation will have a change in structure and therefore require an update to toc.yml. To remove this overhead a mapping file is used to tell Docsy Jekyll which TOC it should use for a particular version,
+the benefit of this is that if the structure of your site does not change then you do not need to create an additional toc.yml file.</p>
+
+<p>You will have a toc-mapping.yml file in your _data directory and the contents will contain the code below to map a particular version with a particular TOC file to use. You need to update this file for each version you create even if you do not need to create a new TOC file.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This file can be used to explicitly map a release to a specific table-of-contents</span>
+<span class="c1"># (TOC). You'll want to use this after any revamps to information architecture, to ensure</span>
+<span class="c1"># that the navigation for older versions still works.</span>
+
+<span class="na">Current</span><span class="pi">:</span> <span class="s">toc</span>
+<span class="na">Previous</span><span class="pi">:</span> <span class="s">previous-toc</span>
+</code></pre></div></div>
+<p><strong>You do not need to prefix the name of the new TOC filename with the folder (in our case versions) as Docsy Jekyll will retrieve that from the _config.yml file and add that to the path.</strong></p>
+
+<div class="alert alert-info" role="alert">
+<h4 class="alert-heading">Note: If a version cannot be found in this mapping file then the standard toc.yml in the _data directory will be used instead.</h4>
+
+</div>
+
+<p>Because we added the versioning.md markdown file to this site we needed a new toc so that this new content could be accessed from the TOC menu. If we had only made an update to the content of the files that already existed, then we could have pointed Previous to toc in the yml above to use the same toc.yml file.</p>
+
+<h2 id="versioning-and-search">Versioning and Search</h2>
+
+<p>As you will have seen in the <a href="#versioning-options">Versioning Options</a> you have the ability to configure Docsy Jekyll to perform it’s searches over the entire site’s documentation, or only certain versions which you can specify. If you choose not to enable it in _config.yml (allow_search = false) then the searches that get performed will only be over the most current version of the documentation in your base _docs folder. If you prefer to have this enabled then you will need to provide a list of search versions (search_version in _config.yml) that you wish to be displayed if a match is found. The following image shows what your users would be shown if you have this enabled. You can see that the search was for the term ‘start’ and we have several results returned but two both for the ‘Getting Started’ topic. The reason for this is due to a result being returned within the current version as well as a result being returned for the previous version as denoted by the badges of ‘Current’ and ‘Previous’ below the titles.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><em>Searching with Versioning enabled</em></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="/docsy-jekyll/assets/img/docsy-jekyll-version-search.png" alt="Search with Versions" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="issues-with-permalinks">Issues with Permalinks</h2>
+
+<p>Please do not use permalinks in your archive documentation Front Matter if you wish to use versioning as this will break the versioning system. If you have permalinks in your current documentation you will need to remove them when you place the documents into a subdirectory so that Jekyll can serve them correctly.</p>
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Using permalinks in your archive documentation Front Matter will cause issues with versioning as this effectively 'hardcodes' the url of that page and will break the versioning links. Please be aware!</h4>
+
+</div>
+
+<h2 id="404-errors">404 Errors</h2>
+
+<p>There will be times where users will navigate around the documentation and could end up pointing to an invalid page that doesn’t exist. For instance while you are reading this page on the <strong>Current</strong> version if you were to change this to the Previous version, via the dropdown, then you will get a page not found as this versioning page did not exist in the prior version. We have created a 404.md page in the base of the site so that the user still gets to navigate even though the page was not found. You can update this page with your own information should you so wish.</p>
+
+<div class="alert alert-info" role="alert">
+<h4 class="alert-heading">When pages are not found and the 404 page is displayed the TOC menus default back to links pointing to the current release.</h4>
+
+</div>
+
+
+<script
+  src="/docsy-jekyll/assets/js/jquery-3.3.1/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8= sha256-T+aPohYXbm0fRYDpJLr+zJ9RmYTswGsahAoIsNiMld4="
+  crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function() {
+
+    var toc = $('#TOC');
+
+    // Select each header
+    sections = $('.td-content h1');
+        $.each(sections, function(idx, v) {
+            section = $(v);
+            var div_id = $(section).attr('id');
+            var div_text = section.text().split('¶')[0];
+            var parent = $("#" + div_id)
+            var content = '<li id="link_' + div_id + '" class="md-nav__item"><a class="md-nav__link" href="#' + div_id + '" title="' + div_text +'">' + div_text +'</a></li>';
+            $(toc).append(content);
+
+            // Add section code to subnavigation
+            var children = $('<nav class="md-nav"><ul class="md-nav__list"></nav></ul>')
+            var contenders = $("#" + div_id).nextUntil("h1");
+            $.each(contenders, function(idx, contender){
+               if($(contender).is('h2') || $(contender).is('h3')) {
+                   var contender_id = $(contender).attr('id');
+                   var contender_text = $(contender).text().split('¶')[0];
+                   var content = '<li class="md-nav__item"><a class="md-nav__link" href="#' + contender_id + '" title="' + contender_text +'">' + contender_text +'</a></li>';
+                   children.append(content);
+                }
+             })
+             $("#link_" + div_id).append(children);
+        });
+    });
+</script>
+
+<script>
+var headers = ["h1", "h2", "h3", "h4"]
+var colors = ["red", "orange", "green", "blue"]
+
+$.each(headers, function(i, header){
+    var color = colors[i];
+    $(header).each(function () {
+        var href=$(this).attr("id");
+        $(this).append('<a class="headerlink" style="color:' + color + '" href="#' + href + '" title="Permanent link">¶</a>')
+    });
+})
+</script>
+
+<script>
+$('h1').first().append('<div></div>')</script>
+
+	
+              
+              <style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<h5 class="feedback--title">Feedback</h5>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="feedback--answer feedback--answer-yes">Yes</button>
+<button class="feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/vsoch/docsy-jekyll/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/vsoch/docsy-jekyll/issues/new">tell us how we can improve</a>.
+</p>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof ga !== 'function') return;
+    const args = {
+      command: 'send',
+      hitType: 'event',
+      category: 'Helpful',
+      action: 'click',
+      label: window.location.pathname,
+      value: value
+    };
+    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script><br/>
+
+
+           </div>
+          </main>
+        </div>
+      </div>
+      <footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        <ul class="list-inline mb-0">  
+          
+            <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="Twitter" data-original-title="Twitter">
+              <a class="text-white" target="_blank" href="https://twitter.com/vsoch">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          
+          
+            <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="LinkedIn" data-original-title="LinkedIn">
+              <a class="text-white" target="_blank" href="https://linkedin.com/in/vsochat">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        <ul class="list-inline mb-0">  
+          <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="" aria-label="GitHub" data-original-title="GitHub">
+            <a class="text-white" target="_blank" href="https://github.com/vsoch/docsy-jekyll">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">© 2024 Namuk Lee All Rights Reserved</small>
+        
+        <p class="mt-2"><a href="/about/">About Docsy</a></p>	
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="/docsy-jekyll/assets/js/main.js"></script>
+
+  </body>
+</html>
