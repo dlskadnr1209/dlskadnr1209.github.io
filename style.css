@@ -5,10 +5,17 @@ body {
     background-color: #f4f4f9;
     color: #333;
 }
+.header {
+    text-align: center;
+    background-color: #f4f4f9;
+    padding: 50px 0;
+}
 
-.header img {
-    display: block;
-    margin: 0 auto;
+.header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    color: #333;
+    margin: 0;
 }
 
 .nav {
