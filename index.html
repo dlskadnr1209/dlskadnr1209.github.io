@@ -4,61 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lee Namuk's GitHub Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        .main {
-            display: flex;
-            justify-content: flex-start;
-            padding: 20px 50px;
-        }
-        .profile-section {
-            max-width: 200px;
-            margin-right: 20px;
-            text-align: center;
-        }
-        .profile-pic {
-            width: 100%;
-            height: auto;
-        }
-        .education {
-            margin-top: 10px;
-            text-align: left;
-        }
-        .intro {
-            flex-grow: 1;
-            max-width: 600px;
-        }
-        .skills, .experience {
-            margin: 20px 0;
-        }
-        .footer {
-            background-color: #f8f9fa;
-            padding: 10px;
-            text-align: center;
-        }
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-        .contact-info img {
-            width: 30px;
-            height: 30px;
-        }
-    </style>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div w3-include-html="header.html"></div>
     <div w3-include-html="nav.html"></div>
-    <div w3-include-html="main.html"></div>
+    <div class="main" id="home">
+        <div class="profile-section">
+            <img src="profile.png" alt="Profile Picture" class="profile-pic">
+            <p class="education">
+                <strong>Education:</strong><br>
+                UNIST, Bachelor of Science in Physics (2016.03 - 2022.02)<br>
+                UNIST, Master of Science in Physics (2022.03 - 2024.02)
+            </p>
+        </div>
+        <div class="intro">
+            <h1>Lee Namuk</h1>
+            <p>
+                Aspiring IT Developer with a keen interest in various projects. Specialized in Particle Simulation (PIC) and analyzing Radio Observational Data. Extensive experience with Deep Learning techniques. Proficient in managing servers, deploying software, and using Docker.
+            </p>
+            <div class="skills">
+                <h2>🛠 Skills</h2>
+                <ul>
+                    <li>Operating Systems: 🐧 Linux</li>
+                    <li>Programming Languages: 🚀 Fortran, 🐍 Python</li>
+                    <li>Others: 🐳 Docker, 🖥️ Server Management</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h2>💼 Experience</h2>
+                <ul>
+                    <li>🌌 Specialized in Particle Simulation (PIC) and Analyzing Radio Observational Data.</li>
+                    <li>🧠 Extensive experience with Deep Learning techniques.</li>
+                    <li>💻 Proficient in managing servers, deploying software, and using Docker.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div w3-include-html="footer.html"></div>
+    <script src="script.js"></script>
 </body>
 </html>
