@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     includeHTML();
+    fetchGitHubRepos();
 });
 
 function includeHTML() {
@@ -24,3 +25,21 @@ function includeHTML() {
         }
     }
 }
+
+function fetchGitHubRepos() {
+    const username = "your-username";
+    const url = `https://api.github.com/users/${username}/repos`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const repoList = document.getElementById("repo-list");
+            data.forEach(repo => {
+                const listItem = document.createElement("li");
+                listItem.textContent = repo.name;
+                repoList.appendChild(listItem);
+            });
+        })
+        .catch(error => console.error('Error fetching GitHub repositories:', error));
+}
+
