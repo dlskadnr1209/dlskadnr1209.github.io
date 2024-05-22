@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>Lee Namuk's GitHub Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
         }
         .header {
             background-color: #f8f9fa;
@@ -43,10 +45,23 @@
             flex-grow: 1;
             margin-left: 20px;
         }
+        .skills, .experience {
+            margin: 20px 0;
+        }
         .footer {
             background-color: #f8f9fa;
             padding: 10px;
             text-align: center;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .contact-info img {
+            width: 30px;
+            height: 30px;
         }
     </style>
 </head>
@@ -62,19 +77,48 @@
         <a href="#blog">Blog</a>
     </div>
 
-    <div class="main">
+    <div class="main" id="home">
         <img src="2.png" alt="Profile Picture" class="profile-pic">
         <div class="intro">
-            <h1>About Me</h1>
-            <p>Write your introduction here. This can include your background, skills, interests, and any other information you'd like to share.</p>
+            <h1>Lee Namuk</h1>
+            <p>
+                <strong>Education:</strong><br>
+                UNIST, Bachelor of Science in Physics (2016.03 - 2022.02)<br>
+                UNIST, Master of Science in Physics (2022.03 - 2024.02)
+            </p>
+            <p>
+                Aspiring IT Developer with a keen interest in various projects. Specialized in Particle Simulation (PIC) and analyzing Radio Observational Data. Extensive experience with Deep Learning techniques. Proficient in managing servers, deploying software, and using Docker.
+            </p>
+            <div class="skills">
+                <h2>🛠 Skills</h2>
+                <ul>
+                    <li>Operating Systems: 🐧 Linux</li>
+                    <li>Programming Languages: 🚀 Fortran, 🐍 Python</li>
+                    <li>Others: 🐳 Docker, 🖥️ Server Management</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h2>💼 Experience</h2>
+                <ul>
+                    <li>🌌 Specialized in Particle Simulation (PIC) and Analyzing Radio Observational Data.</li>
+                    <li>🧠 Extensive experience with Deep Learning techniques.</li>
+                    <li>💻 Proficient in managing servers, deploying software, and using Docker.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <div class="footer">
-        <p>Contact: dlskadnr1209@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/dlskadnr1209" target="_blank">dlskadnr1209</a></p>
+        <div class="contact-info">
+            <a href="mailto:your-email@example.com">
+                <img src="email.png" alt="Email Icon">
+            </a>
+            <a href="https://github.com/your-username" target="_blank">
+                <img src="github.png" alt="GitHub Icon">
+            </a>
+        </div>
+        <p>Lee Namuk © 2024</p>
     </div>
 
 </body>
 </html>
-
