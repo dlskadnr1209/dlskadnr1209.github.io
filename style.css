@@ -5,42 +5,71 @@ body {
     background-color: #f4f4f9;
     color: #333;
 }
+
+.header img {
+    display: block;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #343a40;
+    padding: 10px;
+}
+
+.nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
 .main {
     display: flex;
     justify-content: flex-start;
     padding: 20px 50px;
 }
+
 .profile-section {
     max-width: 200px;
     margin-right: 20px;
     text-align: center;
 }
+
 .profile-pic {
     width: 100%;
     height: auto;
 }
+
 .education {
     margin-top: 10px;
     text-align: left;
 }
+
 .intro {
     flex-grow: 1;
     max-width: 600px;
+    margin-left: 20px;
 }
+
 .skills, .experience {
     margin: 20px 0;
+    padding-left: 20px;
 }
+
 .footer {
     background-color: #f8f9fa;
     padding: 10px;
     text-align: center;
 }
+
 .contact-info {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
+
 .contact-info img {
     width: 30px;
     height: 30px;
