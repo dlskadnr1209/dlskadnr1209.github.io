@@ -14,18 +14,17 @@
         }
         .main {
             display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            padding-left: 50px; /* 왼쪽 공백 추가 */
-            padding-right: 50px; /* 오른쪽 공백 추가 */
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 50px;
         }
         .profile-pic {
             max-width: 200px;
             height: auto;
         }
         .intro {
-            flex-grow: 1;
-            margin-left: 20px;
+            margin-top: 20px;
+            text-align: center;
         }
         .skills, .experience {
             margin: 20px 0;
