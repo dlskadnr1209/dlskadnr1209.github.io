@@ -4,7 +4,9 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
+    font-size: 18px; /* 기본 폰트 크기 증가 */
 }
+
 .header {
     text-align: center;
     background-color: #f4f4f9;
@@ -13,14 +15,14 @@ body {
 
 .header h1 {
     font-family: 'Lobster', cursive;
-    font-size: 3em;
+    font-size: 3.5em; /* 헤더 폰트 크기 증가 */
     color: #333;
     margin: 0;
 }
 
 .nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center; /* 중앙 정렬 */
     background-color: #343a40;
     padding: 10px;
 }
@@ -30,40 +32,19 @@ body {
     margin: 0 15px;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
+    font-size: 1.2em; /* 네비게이션 폰트 크기 증가 */
 }
 
 .main {
     display: flex;
-    justify-content: flex-start;
-    padding: 20px 50px;
     flex-direction: column;
-}
-
-.project {
-    margin-bottom: 30px;
-}
-
-.project h2 {
-    font-family: 'Lobster', cursive;
-    font-size: 2em;
-    color: #444;
-}
-
-.project h3 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.5em;
-    color: #555;
-}
-
-.project p {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1em;
-    color: #666;
+    align-items: center; /* 중앙 정렬 */
+    padding: 20px 50px;
 }
 
 .profile-section {
     max-width: 300px;
-    margin-right: 50px;
+    margin-bottom: 20px; /* 아래쪽 여백 추가 */
     text-align: center;
     flex-shrink: 0;
 }
@@ -76,24 +57,46 @@ body {
 .education {
     margin-top: 10px;
     text-align: left;
-    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em; /* 폰트 크기 증가 */
 }
 
-.intro h1{
+.intro {
+    max-width: 800px;
+    text-align: center; /* 중앙 정렬 */
+}
+
+.intro h1 {
     font-family: 'Lobster', cursive;
-    font-size: 2.5em;
-    color: #444
+    font-size: 3em; /* 폰트 크기 증가 */
+    color: #444;
 }
 
 .intro p {
-    font-size: 1.1em;
+    font-size: 1.2em; /* 폰트 크기 증가 */
     color: #555;
 }
 
 .skills, .experience, #github-repos {
     margin: 20px 0;
     padding-left: 20px;
-    font-family: 'Raleway', sans-serif;
+    text-align: left; /* 텍스트 정렬 왼쪽 */
+    max-width: 800px;
+}
+
+.skills h2, .experience h2, #github-repos h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5em; /* 폰트 크기 증가 */
+    color: #444;
+}
+
+.skills ul, .experience ul, #github-repos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li, .experience li {
+    font-size: 1.2em; /* 폰트 크기 증가 */
+    color: #555;
 }
 
 .footer {
@@ -113,4 +116,3 @@ body {
     width: 30px;
     height: 30px;
 }
-
