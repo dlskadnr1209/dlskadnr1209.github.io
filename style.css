@@ -94,6 +94,7 @@ body {
 .project {
     text-align: center; /* 프로젝트 텍스트 중앙 정렬 */
     margin-bottom: 30px;
+    font-family: 'Raleway',sans-serif;
 }
 
 .project h3 {
@@ -106,7 +107,9 @@ body {
     font-family: 'Raleway', sans-serif;
     text-align: left;
 }
-
+.project h1 {
+    text-align: center;
+}
 .project p {
     font-family: 'Raleway', sans-serif;
     font-size: 1.2em; /* 폰트 크기 증가 */
