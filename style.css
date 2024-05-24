@@ -90,6 +90,10 @@ body {
     color: #444;
 }
 
+.project {
+    text-align: left;
+}
+
 .skills ul, .experience ul, #github-repos ul {
     list-style: none;
     padding: 0;
