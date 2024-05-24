@@ -72,6 +72,12 @@ body {
     color: #444;
 }
 
+.intro a {
+    font-size:1.3em;
+    color: #555;
+    font-weight: bold;
+}
+
 .intro p {
     font-size: 1.2em; /* 폰트 크기 증가 */
     color: #555;
