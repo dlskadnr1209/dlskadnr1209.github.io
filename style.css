@@ -36,6 +36,29 @@ body {
     display: flex;
     justify-content: flex-start;
     padding: 20px 50px;
+    flex-direction: column;
+}
+
+.project {
+    margin-bottom: 30px;
+}
+
+.project h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    color: #444;
+}
+
+.project h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    color: #555;
+}
+
+.project p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    color: #666;
 }
 
 .profile-section {
