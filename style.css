@@ -102,6 +102,11 @@ body {
     color: #333;
 }
 
+.project h2 {
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+}
+
 .project p {
     font-family: 'Raleway', sans-serif;
     font-size: 1.2em; /* 폰트 크기 증가 */
