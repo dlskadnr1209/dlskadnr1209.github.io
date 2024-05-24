@@ -90,8 +90,22 @@ body {
     color: #444;
 }
 
+
 .project {
-    text-align: left;
+    text-align: center; /* 프로젝트 텍스트 중앙 정렬 */
+    margin-bottom: 30px;
+}
+
+.project h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em; /* 폰트 크기 증가 */
+    color: #333;
+}
+
+.project p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em; /* 폰트 크기 증가 */
+    color: #555;
 }
 
 .skills ul, .experience ul, #github-repos ul {
